@@ -3,7 +3,7 @@
 # Script inspired from
 #https://nemo-eastcoast.readthedocs.io/en/latest/nemo-code/nemo3.6/scripts/Install_netcdff.html#install-netcdff
 #https://www.unidata.ucar.edu/software/netcdf/docs/building_netcdf_fortran.html
-# Modified by Romain Caneill to adapt to his computer
+# Modified by Romain Caneill and subsequently Simon Warder
 
 SCRIPT=`realpath $0`
 SCRIPTPATH=`dirname $SCRIPT`

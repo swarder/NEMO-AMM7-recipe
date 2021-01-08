@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # script originaly from https://nemo-eastcoast.readthedocs.io/en/latest/nemo-code/nemo3.6/scripts/Install_hdf5.html#install-hdf5
-# Modified by Romain Caneill to adapt to his computer
+# Modified by Romain Caneill and subsequently Simon Warder
 
 SCRIPT=`realpath $0`
 SCRIPTPATH=`dirname $SCRIPT`

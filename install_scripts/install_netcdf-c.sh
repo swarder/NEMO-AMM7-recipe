@@ -1,7 +1,7 @@
 #!/bin/bash 
 
 # Script from https://nemo-eastcoast.readthedocs.io/en/latest/nemo-code/nemo3.6/scripts/Install_netcdfc.html#install-netcdfc
-# Modified by Romain Caneill to adapt to his computer
+# Modified by Romain Caneill and subsequently Simon Warder
 
 SCRIPT=`realpath $0`
 SCRIPTPATH=`dirname $SCRIPT`

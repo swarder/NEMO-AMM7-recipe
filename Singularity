@@ -12,7 +12,7 @@ From: vcatechnology/linux-mint
     apt-get update && apt-get -y dist-upgrade
     apt-get -y install subversion
     apt-get install -y openmpi-bin libmpich-dev libopenmpi-dev lam4-dev gcc g++ gfortran m4 vim
-    apt-get install -y build-essential #mpich #libcr-dev
+    apt-get install -y build-essential
     apt-get install -y libcurl4-openssl-dev
     ln -s /usr/bin/make /usr/bin/gmake
     apt-get install -y git
@@ -24,11 +24,9 @@ From: vcatechnology/linux-mint
     ./install_netcdf-c.sh
     ./install_netcdf-fortran.sh
     ./install_xios.sh
-    #./download_nemo.sh
 
 %environment
     export LC_ALL=C.UTF-8
-    #export PS1='$(whoami)@$(hostname):$(pwd)$ '
 
 %labels
     Author Simon Warder

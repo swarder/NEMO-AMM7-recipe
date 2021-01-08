@@ -1,10 +1,6 @@
 Bootstrap: docker
 From: vcatechnology/linux-mint
 
-%files
-    install_scripts /nemo/installations/install_scripts
-    configure_amm7.sh /nemo/installations/configure_amm7.sh
-    
 %post
     export DEBIAN_FRONTEND=noninteractive
     apt-get update && apt-get -y dist-upgrade
@@ -16,7 +12,10 @@ From: vcatechnology/linux-mint
     apt-get install -y git
     unset DEBIAN_FRONTEND
 
-    cd nemo/installations/install_scripts
+    mkdir /nemo
+    cd /nemo
+    git clone https://github.com/swarder/NEMO-AMM7-recipe.git installations
+    cd installations/install_scripts
     ./install_zlib.sh
     ./install_hdf5.sh
     ./install_netcdf-c.sh
@@ -28,4 +27,3 @@ From: vcatechnology/linux-mint
 
 %labels
     Author Simon Warder
-    

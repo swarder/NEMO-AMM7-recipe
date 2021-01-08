@@ -7,7 +7,7 @@ Modified here under MIT licence https://github.com/rcaneill/NEMO-installs/blob/m
 
 AMM7 configuration based on https://zenodo.org/record/4022310
 
-The image can be pulled from Singularity Hub:
+The pre-built image can be pulled from Singularity Hub:
 ```
 singularity pull shub://swarder/NEMO-AMM7-recipe:latest
 ```

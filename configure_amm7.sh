@@ -1,9 +1,8 @@
 export INSTDIR=/nemo/installations
 
-export NEMO_INSTDIR=/nemo/installations/sources/NEMO/NEMOGCM
 export CONFIG=AMM7_SURGE
-export WORK=/nemo/installations/sources
-export WDIR=$WORK/$CONFIG
+export WDIR=$WORKDIR/$CONFIG
+export NEMO_INSTDIR=$WORKDIR/NEMOGCM
 
 export INPUTS=$WDIR/INPUTS
 export START_FILES=$WDIR/START_FILES
@@ -11,7 +10,15 @@ export CDIR=$NEMO_INSTDIR/CONFIG
 export TDIR=$NEMO_INSTDIR/TOOLS
 export EXP=$CDIR/$CONFIG/EXP_tideonly
 
-cd $WORK
+# Download NEMO
+cd $WORKDIR
+svn co http://forge.ipsl.jussieu.fr/nemo/svn/branches/UKMO/dev_r8814_surge_modelling_Nemo4/NEMOGCM $NEMO_INSTDIR
+cd $NEMO_INSTDIR
+cp $INSTDIR/install_scripts/arch_nemo/arch-local.fcm ARCH/arch-local_$HOSTNAME.fcm
+
+
+
+cd $WORKDIR
 git clone https://github.com/JMMP-Group/AMM7_surge.git $CONFIG
 cd $CONFIG
 

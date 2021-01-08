@@ -6,22 +6,28 @@ Modified here under MIT licence https://github.com/rcaneill/NEMO-installs/blob/m
 
 To build recipe:
 ```
-sudo singularity build --sandbox nemo_container.sing singularity_recipe
+sudo singularity build --sandbox nemo_container.sing Singularity
 ```
 
 To launch shell:
 ```
-sudo singularity shell --writable nemo_container.sing
+singularity shell --writable nemo_container.sing
+```
+
+Define working directory
+```
+export WORKDIR=/home/$USER/nemo_workdir
 ```
 
 Then configure AMM7 within container
 ```
-cd /nemo/installations/
+cd $WORKDIR
+cp /nemo/installations/configure_amm7.sh .
 ./configure_amm7.sh
 ```
 
 Finally, run NEMO
 ```
-cd /nemo/installations/sources/NEMO/NEMOGCM/CONFIG/AMM7_SURGE/EXP_tideonly
+cd $WORKDIR/NEMOGCM/CONFIG/AMM7_SURGE/EXP_tideonly
 mpirun --allow-run-as-root -np 6 ./opa : -np 1 ./xios_server.exe
 ```

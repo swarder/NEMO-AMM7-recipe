@@ -24,7 +24,7 @@ From: vcatechnology/linux-mint
     ./install_netcdf-c.sh
     ./install_netcdf-fortran.sh
     ./install_xios.sh
-    ./download_nemo.sh
+    #./download_nemo.sh
 
 %environment
     export LC_ALL=C.UTF-8

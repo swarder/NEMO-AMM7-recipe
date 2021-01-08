@@ -1,4 +1,5 @@
 # NEMO-AMM7-recipe
+
 Singularity recipe for installing NEMO prerequisites, and scripts for configuring and running AMM7 model
 
 Scripts installing prerequisites and downloading NEMO source code are modified from https://github.com/rcaneill/NEMO-installs (Copyright (c) 2019 Romain Caneill)
@@ -13,7 +14,7 @@ singularity pull shub://swarder/NEMO-AMM7-recipe:latest
 
 Alternatively, the recipe can be built locally:
 ```
-sudo singularity build --sandbox NEMO_AMM7.simg Singularity
+sudo singularity build NEMO_AMM7.simg Singularity
 ```
 
 Once pulled or built, launch the shell (replace file name as appropriate):

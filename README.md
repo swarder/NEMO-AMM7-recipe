@@ -6,12 +6,12 @@ Modified here under MIT licence https://github.com/rcaneill/NEMO-installs/blob/m
 
 To build recipe:
 ```
-sudo singularity build --sandbox nemo_container.sing Singularity
+sudo singularity build --sandbox nemo_container.simg Singularity
 ```
 
 To launch shell:
 ```
-singularity shell --writable nemo_container.sing
+singularity shell --writable nemo_container.simg
 ```
 
 Define working directory

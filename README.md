@@ -6,14 +6,19 @@ Modified here under MIT licence https://github.com/rcaneill/NEMO-installs/blob/m
 
 AMM7 configuration based on https://zenodo.org/record/4022310
 
-To build recipe:
+The image can be pulled from Singularity Hub:
 ```
-sudo singularity build --sandbox nemo_container.simg Singularity
+singularity pull shub://swarder/NEMO-AMM7-recipe:latest
 ```
 
-To launch shell:
+Alternatively, the recipe can be built locally:
 ```
-singularity shell --writable nemo_container.simg
+sudo singularity build --sandbox NEMO_AMM7.simg Singularity
+```
+
+Once pulled or built, launch the shell (replace file name as appropriate):
+```
+singularity shell NEMO-AMM7-recipe_latest.sif
 ```
 
 Define working directory

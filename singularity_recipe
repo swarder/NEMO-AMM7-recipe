@@ -31,5 +31,6 @@ From: vcatechnology/linux-mint
     #export PS1='$(whoami)@$(hostname):$(pwd)$ '
 
 %labels
+    Author Simon Warder
 
 %runscript

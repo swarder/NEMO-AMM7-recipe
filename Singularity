@@ -1,8 +1,6 @@
 Bootstrap: docker
 From: vcatechnology/linux-mint
 
-%help
-
 %files
     install_scripts /nemo/installations/install_scripts
     configure_amm7.sh /nemo/installations/configure_amm7.sh
@@ -30,5 +28,4 @@ From: vcatechnology/linux-mint
 
 %labels
     Author Simon Warder
-
-%runscript
+    
